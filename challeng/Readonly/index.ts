@@ -16,10 +16,38 @@ interface Todo1 {
   };
 }
 
-const test: Test = {
-  title: 'hoge',
-  description: 'aaa',
+// const test: Test = {
+//   title: 'hoge',
+//   description: 'aaa',
+// };
+
+let test: Test = {
+  title: 'hahha',
+  description: 'hehe',
+  meta: {
+    author: 'haha',
+  },
 };
+console.log('first', test);
+
+// test = {
+//   title: 'wow',
+//   description: 'wow',
+//   meta: {
+//     author: 'wow',
+//   },
+// };
+
+
+console.log('second', test);
+
+const func = (arg: readonly string[]) => {
+  return arg;
+};
+
+const arr = ['hoo', 'buff'] as const;
+
+const result = func(arr);
 
 const testFunc = (arg: Test) => {
   return true;
@@ -39,4 +67,5 @@ type Test = {
     readonly author: string;
   };
 };
+
 testFunc(Arg);
