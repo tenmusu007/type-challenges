@@ -9,6 +9,7 @@
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@biomejs/biome": "^1.7.3",
     "@type-challenges/utils": "^0.1.1"
   }
 }
