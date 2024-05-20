@@ -1,6 +1,16 @@
-type PartialByKeys<T, K extends T > = {
-  // [P in keyof K as P extends K ? [P | undefined?] : P]: T[P];
-};
+// type PartialByKeys<T, K extends keyof T = keyof T > = {
+//   [P in keyof K as P extends K ? [P | undefined?] : P]: T[P];
+// };
+
+// Omit でobj & objが使えるよ！
+type PartialByKeys<T, K extends keyof T = keyof T> = Omit<
+  {
+    [key in K]?: T[key];
+  } & {
+    [key in Exclude<keyof T, K>]: T[key];
+  },
+  never
+>;
 
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils';

@@ -5,7 +5,7 @@ type PartialObj = {
   age?: number | undefined;
 };
 type MyPartial<T> = {
-  [key in keyof T]?: T[key] | undefined;
+  [key in keyof T]?: T[key];
 };
 
 // Partialはoptional propertyにする型関数(ユーティリティ関数)
