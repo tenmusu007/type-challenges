@@ -21,14 +21,14 @@ interface Todo1 {
 //   description: 'aaa',
 // };
 
-let test: Test = {
-  title: 'hahha',
-  description: 'hehe',
-  meta: {
-    author: 'haha',
-  },
-};
-console.log('first', test);
+// let test: Test = {
+//   title: 'hahha',
+//   description: 'hehe',
+//   meta: {
+//     author: 'haha',
+//   },
+// };
+// console.log('first', test);
 
 // test = {
 //   title: 'wow',
@@ -39,7 +39,7 @@ console.log('first', test);
 // };
 
 
-console.log('second', test);
+// console.log('second', test);
 
 const func = (arg: readonly string[]) => {
   return arg;
