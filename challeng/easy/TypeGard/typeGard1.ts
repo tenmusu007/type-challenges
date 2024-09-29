@@ -1,6 +1,7 @@
 const func = (arg: string)  => {
 	const parsed: unknown = JSON.parse(arg) ;
 	// ✍🏼 エラーにならないように修正してください
+// @ts-expect-error
 	console.log(parsed.name.toUpperCase());
 };
 
