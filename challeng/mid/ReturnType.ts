@@ -28,6 +28,7 @@
 
 // biome-ignore lint/suspicious/noExplicitAny: <explanation>
 type  MyReturnType<T extends (...arg: any) => any> = T extends (
+	// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 	...arg: any
 ) => infer R
 	? R
@@ -53,6 +54,7 @@ type ComplexObject = {
 };
 
 const fn = (v: boolean) => (v ? 1 : 2);
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 const fn1 = (v: boolean, w: any) => (v ? 1 : 2);
 
 /* _____________ 次のステップ _____________ */
